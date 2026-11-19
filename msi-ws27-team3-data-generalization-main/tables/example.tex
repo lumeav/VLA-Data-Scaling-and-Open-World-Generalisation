@@ -1,0 +1,22 @@
+% Tabelle über eine Spalte, Stil wie im T-ASE-Paper: Caption in Title Case ÜBER der Tabelle,
+% \label nach \caption, \footnotesize, booktabs-Linien (keine senkrechten Linien), -- für leere Zellen,
+% Anmerkungen klein unter der Tabelle. Im Text: Table~\ref{tab:example}.
+\begin{table}[t]
+  \centering
+  \caption{An Example of a Table}
+  \label{tab:example}
+  \footnotesize
+  \begin{tabular}{@{}lccc@{}}
+    \toprule
+     & \multicolumn{2}{c}{Grouped Columns} & \\
+    \cmidrule(lr){2-3}
+    Paper & Column A & Column B & Column C \\
+    \midrule
+    Open X-Embodiment~\cite{oxe2023} & -- & -- & -- \\
+    DROID~\cite{khazatsky2024droid} & -- & -- & -- \\
+    $\pi_{0.5}$~\cite{pi2025pi05} & -- & -- & -- \\
+    Knowledge Insulation~\cite{driess2025ki} & -- & -- & -- \\
+    \bottomrule
+  \end{tabular}
+  \\[2pt]\raggedright\scriptsize Notes below the table, e.g., abbreviations. --: not reported.
+\end{table}

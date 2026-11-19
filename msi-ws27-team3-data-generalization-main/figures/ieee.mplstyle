@@ -1,0 +1,19 @@
+# Abbildungen passend zum Paper: Schrift wie im Fließtext (Times, Mathe in Computer Modern, 10 pt),
+# Breite einer Spalte (3,5 in), Farben aus tab20c (5 Farbtöne mit je 4 Abstufungen).
+# Nutzung: plt.style.use("figures/ieee.mplstyle"), für zweispaltige Abbildungen figsize=(7.16, ...).
+text.usetex: True
+text.latex.preamble: \usepackage{times}
+font.family: serif
+font.size: 10
+axes.labelsize: 10
+legend.fontsize: 10
+xtick.labelsize: 10
+ytick.labelsize: 10
+figure.figsize: 3.5, 2.2
+figure.constrained_layout.use: True
+savefig.format: pdf
+axes.grid: True
+grid.alpha: 0.3
+legend.frameon: False
+# tab20c, zuerst die dunkelste Stufe jedes Farbtons, dann die helleren
+axes.prop_cycle: cycler('color', ['3182bd', 'e6550d', '31a354', '756bb1', '636363', '6baed6', 'fd8d3c', '74c476', '9e9ac8', '969696', '9ecae1', 'fdae6b', 'a1d99b', 'bcbddc', 'bdbdbd', 'c6dbef', 'fdd0a2', 'c7e9c0', 'dadaeb', 'd9d9d9'])

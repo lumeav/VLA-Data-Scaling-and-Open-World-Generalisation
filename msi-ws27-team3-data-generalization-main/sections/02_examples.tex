@@ -1,0 +1,90 @@
+% Beispiele für die üblichen Elemente im IEEE-Stil, angelehnt an das IEEE-Journal-Template
+% (bare_jrnl_new_sample4.tex). Dient als Vorlage: diesen Abschnitt durch die eigenen Abschnitte
+% ersetzen (als eigene Dateien unter sections/, in main.tex einbinden) und dann löschen.
+
+\section{Examples of Common Elements}
+\label{sec:examples}
+
+\TODO{Replace this section with your own sections.}
+
+\subsection{Sections and Subsections}
+Primary headings use Roman numerals, secondary headings capital letters, and tertiary headings Arabic numerals. Refer to sections as Section~\ref{sec:introduction}.
+
+\subsubsection{Tertiary Heading}
+Use tertiary headings sparingly in a six-page paper.
+
+\subsection{Citations}
+Cite with \verb|\cite{key}|, e.g., \cite{oxe2023}, and several references in one bracket as \cite{oxe2023,khazatsky2024droid}. All entries live in \texttt{refs.bib}. The reference list is generated in IEEE style, and only cited entries appear in it. Name authors in the text with ``et al.'' when a reference has three or more authors.
+
+\subsection{Lists}
+A bulleted list:
+\begin{itemize}
+  \item first item;
+  \item second item.
+\end{itemize}
+A numbered list:
+\begin{enumerate}
+  \item first step;
+  \item second step.
+\end{enumerate}
+
+\subsection{Equations}
+Number display equations, punctuate them as part of the sentence, and refer to them as (\ref{eq:example}). A policy that predicts a chunk of $H$ actions from the observation $\mathbf{o}_t$ and the instruction $\ell$ can be written as
+\begin{equation}
+  \mathbf{A}_t = \left[\mathbf{a}_t, \mathbf{a}_{t+1}, \dots, \mathbf{a}_{t+H-1}\right] \sim \pi_\theta\left(\cdot \mid \mathbf{o}_t, \ell\right).
+  \label{eq:example}
+\end{equation}
+Use \texttt{align} for multi-line equations, aligned at the relation sign:
+\begin{align}
+  y &= a x + b \label{eq:example_line1}\\
+    &= a \left(x + \frac{b}{a}\right). \label{eq:example_line2}
+\end{align}
+Write units with \texttt{siunitx}, e.g., \SI{50}{\hertz} or \SI{0.5}{\meter\per\second}.
+
+\subsection{Figures}
+Place figure files in \texttt{figures/}, preferably as vector graphics (PDF), and refer to them as Fig.~\ref{fig:example}. Captions go below the figure. For a figure taken from a paper, state the source in the caption, e.g., ``Adapted from~\cite{oxe2023}.'' Plots made with Python use the shared style \texttt{figures/ieee.mplstyle}, which sets the body font (Times, \SI{10}{pt}), the column width, and the \texttt{tab20c} colors; \texttt{figures/example\_plot.py} creates Fig.~\ref{fig:example}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{example_plot}
+  \caption{Example of a single-column figure. One hue per group and lighter shades for variants (\texttt{tab20c}). Captions end with a period.}
+  \label{fig:example}
+\end{figure}
+
+Figures with several parts use \verb|\subfloat| and describe the parts in the main caption, as in Fig.~\ref{fig:example_wide}.
+
+\begin{figure*}[t]
+  \centering
+  \subfloat[]{\includegraphics[width=0.45\textwidth]{example_plot}\label{fig:example_a}}
+  \hfil
+  \subfloat[]{\includegraphics[width=0.45\textwidth]{example_plot}\label{fig:example_b}}
+  \caption{Example of a figure spanning both columns. (a) First case. (b) Second case.}
+  \label{fig:example_wide}
+\end{figure*}
+
+% Abbildungen und Tabellen über beide Spalten (figure*, table*) erscheinen frühestens oben auf der
+% nächsten Seite. Deshalb im Quelltext etwas vor der Stelle einbinden, an der sie besprochen werden.
+\input{tables/example_wide}
+
+\subsection{Tables}
+Table captions use title case and go above the table. Table~\ref{tab:example_wide} spans both columns, Table~\ref{tab:example} one column. Each table lives in its own file in \texttt{tables/}.
+
+\input{tables/example}
+
+\subsection{Algorithms}
+Algorithms are numbered and have a short title, see Algorithm~\ref{alg:example}.
+
+\begin{algorithm}[t]
+  \caption{Example of an Algorithm}
+  \label{alg:example}
+  \begin{algorithmic}[1]
+    \REQUIRE policy $\pi_\theta$, instruction $\ell$, chunk length $H$
+    \WHILE{task not finished}
+      \STATE observe $\mathbf{o}_t$
+      \STATE $\mathbf{A}_t \gets \pi_\theta(\mathbf{o}_t, \ell)$ \hfill (\ref{eq:example})
+      \FOR{$k = 0$ \TO $H-1$}
+        \STATE execute $\mathbf{a}_{t+k}$
+      \ENDFOR
+    \ENDWHILE
+  \end{algorithmic}
+\end{algorithm}

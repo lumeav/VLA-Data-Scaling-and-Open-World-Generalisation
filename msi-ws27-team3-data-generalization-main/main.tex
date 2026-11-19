@@ -1,0 +1,56 @@
+%==============================================================================
+% MSI-Seminar WS 2026/27, Vision-Language-Action-Modelle in der Robotik
+% Team 3: Daten, Skalierung und Open-World-Generalisierung
+%
+% IEEEtran journal template (IEEE Transactions, as used by T-ASE).
+% Build: make  (or latexmk -pdf main.tex, or upload to Overleaf)
+%==============================================================================
+\documentclass[lettersize,journal]{IEEEtran}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{siunitx}
+\sisetup{per-mode=symbol}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}
+
+%--- Platzhalter, vor der Abgabe alle entfernen (make check) --------------------
+\newcommand{\TODO}[1]{\textcolor{red}{[TODO: #1]}}
+
+\begin{document}
+\bstctlcite{IEEEexample:BSTcontrol} % more than six authors -> first author et al.
+
+% Arbeitstitel, darf geändert werden
+\title{Data, Scale, and Open-World Generalization\\in VLA Models}
+
+\author{First~Author and Second~Author%
+\thanks{The authors are with the University of Applied Sciences (HTWG) Konstanz, 78462 Konstanz, Germany.}}
+
+\markboth{MSI Seminar ``Vision-Language-Action Models in Robotics'', HTWG Konstanz, Winter Term 2026/27}%
+{Team 3: Data and Generalization}
+
+\maketitle
+
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_examples}
+\input{sections/03_conclusion}
+\input{sections/04_acknowledgment}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

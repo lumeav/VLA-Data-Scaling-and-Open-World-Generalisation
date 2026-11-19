@@ -1,0 +1,16 @@
+% Tabelle über beide Spalten: table* und tabularx mit \textwidth.
+% X-Spalten brechen langen Text um. Im Text: Table~\ref{tab:example_wide}.
+\begin{table*}[t]
+  \centering
+  \caption{An Example of a Table Spanning Both Columns}
+  \label{tab:example_wide}
+  \footnotesize
+  \begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+    \toprule
+    Aspect & Column With Longer Text & Another Column With Longer Text \\
+    \midrule
+    Row 1 & Text in X columns wraps automatically to the available width. & -- \\
+    Row 2 & -- & -- \\
+    \bottomrule
+  \end{tabularx}
+\end{table*}
