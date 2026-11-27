@@ -1,0 +1,8 @@
+- auf eng schreiben
+- Abgabe: 18.12
+- nochmal mittew dsezmebr ein Meeting um das paper zu besprechen. Gliederung können wir vorab schonmal schicken, um nicht zu viel falsch anzufangen.
+- Google Deepreview Tool um Paper zu reviewen -> 2 pro Woche
+- Acknoweledgement Section wo Die KI-Tools mit deren Aufgabern aufgelistert werden
+- Satzformulierungen sollen sich flüssig und nicht KI generiert lesen lassen.
+- Vereinzelt dürfen wir Schaubilder kopieren
+- 

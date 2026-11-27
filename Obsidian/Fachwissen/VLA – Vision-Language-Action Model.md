@@ -22,7 +22,7 @@ Die zentrale Idee ist relativ einfach, aber sehr wirkungsvoll:
 
 **Eine Roboterbewegung wird in eine Token-Sequenz umgewandelt. Dadurch kann ein Sprachmodell lernen, Roboteraktionen genauso vorherzusagen wie Wörter.**
 
-![[Pasted image 20261115143613.png]]
+![[Pasted image 20261115143613 1.png]]
 
 
 ---
@@ -63,9 +63,9 @@ Ein VLA erweitert das Konzept eines VLM um die Fähigkeit, Aktionen zu erzeugen.
 Das ist eine Weiterentwicklung des VLA-Ansatzes in der Robotik. Der wesentliche Unterschied: Ein WAM lernt nicht nur, welche Aktion es ausführen soll, sondern auch, **wie sich die physische Welt durch diese Aktion verändern wird.**
 
 
-![[Pasted image 20261115144501.png]]
+![[Pasted image 20261115144501 1.png]]
 
-![[Pasted image 20261115144635.png]]
+![[Pasted image 20261115144635 1.png]]
 
 WAM = Thema 6
 
