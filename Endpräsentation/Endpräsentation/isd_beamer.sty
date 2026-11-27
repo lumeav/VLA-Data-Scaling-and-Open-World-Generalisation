@@ -1,0 +1,48 @@
+\ProvidesPackage{isd_beamer}
+%\usepackage{edc}
+
+\usetheme{isd}
+
+\newcommand{\presdatum}{\today}
+\providecommand{\titleimage}{images/title.png}
+\providecommand\Hy@PageAnchorSlide{}
+
+
+\mode<presentation>
+{
+%  \setbeamercovered{transparent}
+}
+\institute[MSI-Seminar\ $\vert$ HTWG Konstanz]{}
+%keine navigationsleiste im pdf
+\beamertemplatenavigationsymbolsempty 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for beamer slides to include plain *.tex
+% Slide with frametitle and framesubtitle
+% #1 filename
+% #2 frametitle
+% #3 framesubtitle (no subtitle --> blank)
+%
+\newcommand{\bslide}[3]
+{\begin{frame}[shrink]
+	\frametitle{#2}
+	\framesubtitle{#3}
+	\input{#1}
+	\end{frame}
+	}	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for beamer slides to include plain *.tex
+%% Slide with frametitle and framesubtitle
+%% #1 filename
+%% #2 frametitle
+%% #3 framesubtitle (no subtitle --> blank)
+%% #4 fontsize-command for content
+%%
+%\newcommand{\bslide}[4]
+%{\begin{frame}
+%	\frametitle{#2}
+%	\framesubtitle{#3}
+%	#4 \input{#1}
+%	\end{frame}
+%	}	
